@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
   # GET /places
   # GET /places.json
   def index
@@ -10,6 +10,8 @@ class PlacesController < ApplicationController
   # GET /places/1
   # GET /places/1.json
   def show
+  @comments = @place.comments.all
+  @comment = @place.comments.build
   end
 
   # GET /places/new
