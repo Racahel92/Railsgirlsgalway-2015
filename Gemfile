@@ -1,4 +1,6 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem "devise"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -28,8 +30,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-gem "letsrate", :git => "git://github.com/iammyr/letsrate.git"
-
+gem "letsrate", path: "../letsrate"
+gem 'coffee-script-source', '1.8.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
